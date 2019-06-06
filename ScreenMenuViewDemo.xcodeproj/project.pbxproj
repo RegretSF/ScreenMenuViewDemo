@@ -14,7 +14,6 @@
 		C5980C1C22A8F2F1001FA6D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5980C1A22A8F2F1001FA6D6 /* LaunchScreen.storyboard */; };
 		C5980C1F22A8F2F2001FA6D6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5980C1E22A8F2F2001FA6D6 /* main.m */; };
 		C5980C2722A8F5C1001FA6D6 /* FSScreenMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5980C2622A8F5C1001FA6D6 /* FSScreenMenuView.m */; };
-		C5980C2A22A91C45001FA6D6 /* FSTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C5980C2922A91C45001FA6D6 /* FSTitleButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +29,6 @@
 		C5980C1E22A8F2F2001FA6D6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C5980C2522A8F5C1001FA6D6 /* FSScreenMenuView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSScreenMenuView.h; sourceTree = "<group>"; };
 		C5980C2622A8F5C1001FA6D6 /* FSScreenMenuView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSScreenMenuView.m; sourceTree = "<group>"; };
-		C5980C2822A91C45001FA6D6 /* FSTitleButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSTitleButton.h; sourceTree = "<group>"; };
-		C5980C2922A91C45001FA6D6 /* FSTitleButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSTitleButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,8 +67,6 @@
 				C5980C1322A8F2F0001FA6D6 /* ViewController.m */,
 				C5980C2522A8F5C1001FA6D6 /* FSScreenMenuView.h */,
 				C5980C2622A8F5C1001FA6D6 /* FSScreenMenuView.m */,
-				C5980C2822A91C45001FA6D6 /* FSTitleButton.h */,
-				C5980C2922A91C45001FA6D6 /* FSTitleButton.m */,
 				C5980C1522A8F2F0001FA6D6 /* Main.storyboard */,
 				C5980C1822A8F2F1001FA6D6 /* Assets.xcassets */,
 				C5980C1A22A8F2F1001FA6D6 /* LaunchScreen.storyboard */,
@@ -151,7 +146,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5980C2A22A91C45001FA6D6 /* FSTitleButton.m in Sources */,
 				C5980C1422A8F2F0001FA6D6 /* ViewController.m in Sources */,
 				C5980C1F22A8F2F2001FA6D6 /* main.m in Sources */,
 				C5980C2722A8F5C1001FA6D6 /* FSScreenMenuView.m in Sources */,
