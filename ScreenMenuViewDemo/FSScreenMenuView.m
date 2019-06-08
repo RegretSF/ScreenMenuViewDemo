@@ -124,7 +124,7 @@ static NSString * const tableViewCellID = @"tableViewCellID";
     return self;
 }
 
-//重写此方法解决子视图超出父视图不响应的问题
+//重写此方法解决子视图超出父视图点击不响应的问题
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
     UIView * view = [super hitTest:point withEvent:event];
     if (view == nil) {
