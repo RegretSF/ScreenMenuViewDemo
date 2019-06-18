@@ -163,7 +163,6 @@ static NSString * const tableViewCellID = @"tableViewCellID";
     
     CGFloat maskH = [UIScreen mainScreen].bounds.size.height - (self.bounds.origin.y + self.bounds.size.height);
     self.maskView.frame = CGRectMake(0, self.bounds.size.height, self.bounds.size.width, maskH);
-
 }
 
 #pragma mark 监听事件
@@ -176,6 +175,7 @@ static NSString * const tableViewCellID = @"tableViewCellID";
     UIButton *currentBtn = button;
     
     //2.获取之前的label
+    if (self.btns.count == 0) { return; }
     UIButton *oldBtn = self.btns[currentIndex];
     
     //3.切换按钮的状态
@@ -223,6 +223,7 @@ static NSString * const tableViewCellID = @"tableViewCellID";
     self.tableView.hidden = YES;
     
     //2.获取当前label，取消button的选择状态
+    if (self.btns.count == 0) { return; }
     UIButton *currentBtn = self.btns[currentIndex];
     currentBtn.selected = NO;
     
