@@ -27,9 +27,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,strong) NSArray *titles;
 /**排序内容数组*/
 @property(nonatomic,strong) NSArray *contentTexts;
-/**筛选标题未选中的颜色*/
+/**筛选标题未选中的颜色,默认黑色*/
 @property(nonatomic,strong) UIColor *titleColorNormal;
-/**筛选标题选中的颜色*/
+/**筛选标题选中的颜色, 默认屎黄色*/
 @property(nonatomic,strong) UIColor *titleColorSelect;
 /**筛选标题未选中的图标*/
 @property(nonatomic,strong) UIImage *titleIconNormal;

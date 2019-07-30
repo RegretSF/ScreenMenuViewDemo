@@ -55,6 +55,9 @@
     self.menuView.frame = CGRectMake(0, kNavigationBarH + kStatusBarH, [UIScreen mainScreen].bounds.size.width, 45);
     [self.view addSubview:self.menuView];
 }
+- (IBAction)clickButton:(id)sender {
+    NSLog(@"点击啦！！");
+}
 
 #pragma makr FSScreenMenuViewDelegate
 - (void)screenMenuView:(FSScreenMenuView *)screenMenuView didSelectTitleIndex:(NSInteger)index {

@@ -26,6 +26,8 @@ UITableViewDataSource>
     CGFloat cellW;
     /**记录点击当前的按钮*/
     NSInteger currentIndex;
+    /**导航栏的高度*/
+    CGFloat naviH;
 }
 //***********************************cellID***************************************//
 static NSString * const collectionViewCellID = @"collectionViewCellID";
@@ -116,6 +118,7 @@ static NSString * const tableViewCellID = @"tableViewCellID";
         self.isClickDismiss = NO;
         self.titleColorNormal = [UIColor blackColor];
         self.titleColorSelect = [UIColor orangeColor];
+        naviH = 44 + [[UIApplication sharedApplication] statusBarFrame].size.height;
         
         //1、添加子视图
         [self addSubviews];
@@ -148,10 +151,10 @@ static NSString * const tableViewCellID = @"tableViewCellID";
     [self addSubview:self.collectionView];
     
     //2、添加遮罩
-    [self addSubview:self.maskView];
-    
+    [[UIApplication sharedApplication].keyWindow addSubview:self.maskView];
+
     //3、添加tableView
-    [self addSubview:self.tableView];
+    [[UIApplication sharedApplication].keyWindow addSubview:self.tableView];
     
 }
 
@@ -161,8 +164,9 @@ static NSString * const tableViewCellID = @"tableViewCellID";
     
     self.collectionView.frame = self.bounds;
     
-    CGFloat maskH = [UIScreen mainScreen].bounds.size.height - (self.bounds.origin.y + self.bounds.size.height);
-    self.maskView.frame = CGRectMake(0, self.bounds.size.height, self.bounds.size.width, maskH);
+    CGFloat maskY = naviH + self.bounds.size.height;
+    CGFloat maskH = [UIScreen mainScreen].bounds.size.height - maskY;
+    self.maskView.frame = CGRectMake(0, maskY, self.bounds.size.width, maskH);
 }
 
 #pragma mark 监听事件
@@ -205,7 +209,7 @@ static NSString * const tableViewCellID = @"tableViewCellID";
     //5.设置tableView的高度
     NSArray *textArr = self.contentTexts[currentIndex];
     CGFloat tableViewH = self.tableView.rowHeight * textArr.count;
-    self.tableView.frame = CGRectMake(0, self.bounds.size.height, self.bounds.size.width, tableViewH);
+    self.tableView.frame = CGRectMake(0, self.bounds.size.height + naviH, self.bounds.size.width, tableViewH);
     [self.tableView reloadData];
     
     //6.通知代理
